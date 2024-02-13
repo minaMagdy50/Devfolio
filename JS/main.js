@@ -1,7 +1,7 @@
-var typed = new Typed("#typed", {
-    strings: ["Designer", "Developer" , "freelancer" , "photographer" ],
-    typeSpeed: 35,
+var typed = new Typed("#type", {
+    strings: ["Designer", "Developer" , "freelancer" ],
+    typeSpeed: 40,
     startDelay: 500, 
-    backDelay:1000,
+    backDelay:500,
     loop: true,
   });
