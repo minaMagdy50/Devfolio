@@ -4,7 +4,7 @@ header{
     background-size: cover;
 }
 .header-text h2{
-    font-size: 4.5rem;
+    font-size: 3.125rem;
 }
 
 
@@ -39,6 +39,28 @@ nav li::after{
 nav li:hover::after{
     transform: scaleX(100%);
 }
+
+@media (max-width: 768px) {
+    .navbar-nav{
+        text-align: center;
+    }
+    nav li::after{
+        content: "";
+        width: 50%;
+        height: .125rem;
+        background-color: white ;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        transform: scaleX(0);
+        transition: all 0.5s;
+        transform-origin: left;
+    } 
+    nav li:hover::after{
+        transform: scaleX(15%);
+    }
+}
+
 .skill-bar{
     height: .875rem;
     background-color: rgb(205, 225, 248);
@@ -62,7 +84,7 @@ nav li:hover::after{
 .header-text h3{
     position: relative;
 }
-.header-text h3::after{
+/* .header-text h3::after{
     content: " |";
     animation-name: typing;
     animation-duration: 9s;
@@ -145,7 +167,7 @@ nav li:hover::after{
     74%{content: "ph| ";}
     75%{content: "p| ";}
     100%{content: "| ";}
-}
+} */
 .icon0{
     width: 120px;
     height: 120px;
@@ -184,16 +206,6 @@ nav li:hover::after{
     
 }
 
-/* .PORTFOLIO h2::after{
-
-    content: "";
-    width: 2.5rem;
-    height: .375rem;
-    background-color: rgb(0, 120, 255);
-    position: absolute;
-    bottom: -130%;
-    left: 48%;
-} */
 .w-work{
     color: rgb(30, 136, 255);
     font-size: .8125rem;
@@ -306,22 +318,27 @@ nav li:hover::after{
     height: 45px;
 }
 .icon2{
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 3.125rem;
     border: solid var(--main-color) .3125rem ;
     transition: all 0.5s;
     cursor: pointer;
 }
 .socialmedia{
-    width: 40%;
+    width: 35%;
 }
 .icon2:hover{
-    background-color: var(--main-color);
-    color: white;
+    background-color: var(--main-color) !important;
+    color: white !important;
     border: solid rgb(255, 255, 255, 0.8) .3125rem;
 }
 footer{
     background: linear-gradient(rgb(18, 103, 200 ,1) , rgb(18, 103, 200 ,1)) , url(../images/overlay-bg.jpg);
     background-position: top top;
 
+}
+@media (max-width: 768px) {
+    .socialmedia{
+        width: 50%;
+    }
 }
